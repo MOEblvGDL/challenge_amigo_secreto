@@ -53,9 +53,13 @@ function eliminarAmigo(index) {
 // Función para sortear un amigo
 function sortearAmigo() {
     if (amigos.length === 0) {
-        alert("Agrega al menos un nombre antes de sortear.");
+        alert("Agrega al menos dos nombres antes de sortear.");
         return;
-    }
+    } else if (amigos.length === 1) {
+        alert("Agregar almenos dos nombres antes de sortear.");
+        return;
+    };
+
 
     const indiceAleatorio = Math.floor(Math.random() * amigos.length);
     const amigoSecreto = amigos[indiceAleatorio];
